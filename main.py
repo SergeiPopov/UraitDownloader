@@ -9,7 +9,6 @@ from aiohttp import ClientSession
 from pypdf import PdfWriter
 from svglib.svglib import svg2rlg
 from reportlab.graphics import renderPDF
-from win11toast import toast
 import environ
 
 
@@ -108,7 +107,6 @@ async def main():
             task_proc = asyncio.create_task(process(pdf_stack, book_info['pages']))
             await asyncio.gather(*tasks, task_proc)
             create_pdf(book_info['book_title'], pdf_stack)
-            toast(f'\nКнига скачана!\n{book_url}')
     except Exception as e:
         logging.info(f'Ошибка работы программы \n{e}')        
     finally:
