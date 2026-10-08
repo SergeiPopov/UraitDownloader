@@ -1,0 +1,11 @@
+[project]
+name = "uraitdownloader"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "cryptography>=50.0.2",
+    "httpx>=0.28.1",
+    "pypdf>=6.19.0",
+    "reportlab>=5.0.1",
+    "svglib>=2.2.0",
+]
